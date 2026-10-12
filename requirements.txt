@@ -1,1 +1,12 @@
+fastapi
+uvicorn
+sqlalchemy
+pymysql
+pymongo
+pydantic
+pandas
+faker
+python-dotenv
+pytest
+httpx
 

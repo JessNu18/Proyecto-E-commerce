@@ -13,15 +13,14 @@ def test_inicio():
     assert respuesta.json()["proyecto"] == "OrderPulse"
 
 
-
 def test_health():
     respuesta = client.get("/health")
 
-    print("Código:", respuesta.status_code)
-    print("Detalle:", respuesta.text)
-
     assert respuesta.status_code == 200
+    datos = respuesta.json()
 
+    assert datos["mysql"] == "conectado"
+    assert datos["mongodb"] == "conectado"
 
 
 def test_consultar_pedidos():
